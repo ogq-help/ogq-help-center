@@ -5533,48 +5533,7 @@ zd-summary-block {
 
 
 
-/* ================================================= */
-/* 헤더 [문의 등록] 버튼 스타일 재정의 (검은색 네모/하얀색 글씨) */
-/* font-weight: bold 추가됨 */
-/* ================================================= */
-
-/* 헤더에 있는 '문의 등록' 버튼의 기본 스타일 (깔끔한 검은색 배경) */
-.header a.submit-a-request {
-    background-color: #000000 !important; /* 배경색: 검은색 */
-    color: #ffffff !important;           /* 글씨색: 하얀색 */
-    border: 1px solid #000000 !important; /* 테두리색: 검은색 (깔끔한 네모 모양) */
-    padding: 6px 15px;                   /* 버튼 패딩 (크기 조정) */
-    border-radius: 4px;                  /* 모서리를 약간 둥글게 */
-    font-size: 14px;
-    line-height: 1.5;
-    text-decoration: none;
-    display: inline-block;
-    
-    /* 🚀 수정/추가할 코드: 오른쪽 마진을 늘려 버튼을 왼쪽으로 이동시킵니다. */
-    /* 현재 10px로 설정했습니다. 이동 거리를 원하시면 이 값을 조정하세요. */
-    margin-right: 10px !important;
-    
-    /* 🚀 기존 코드: 글씨를 굵게 만듭니다. */
-    font-weight: bold !important; 
-}
-
-/* 호버(마우스 오버) 또는 활성화(클릭) 시 스타일 */
-.header a.submit-a-request:hover,
-.header a.submit-a-request:active,
-.header a.submit-a-request:focus {
-    background-color: #333333 !important; /* 호버 시 약간 어두운 회색으로 변경 (클릭 느낌) */
-    color: #ffffff !important;           /* 글씨색: 하얀색 유지 */
-    border-color: #333333 !important;     /* 테두리색: 호버 배경색과 동일하게 유지 */
-    text-decoration: none;
-    
-    /* 🚀 추가할 코드: 호버 시에도 굵기를 유지합니다. */
-    font-weight: bold !important; 
-}
-
-/* 이미 방문한 링크의 색상도 흰색으로 유지하도록 강제 */
-.header a.submit-a-request:visited {
-    color: #ffffff !important;
-}
+/* 헤더 [문의 등록] 버튼: 아래 'OGQ 헤더' 부분에서 로고 색 그라데이션으로 정의 (예전 검은 네모·검은 테두리 스타일은 삭제) */
 
 /* ================================================= */
 /* 문의 등록 페이지 상단 헤더 스타일 */
@@ -5834,23 +5793,36 @@ p.StyledParagraph-sc-zkult2-0 {
 }
 
 /* 문의 등록 버튼 */
-.header .submit-a-request,
+.header a.submit-a-request,
 .header a[href*="request.html"]{
-  background:linear-gradient(90deg,#4F6BE0 0%,#7A6CE6 55%,#B477E0 100%) !important;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:linear-gradient(90deg,#5B6FE6 0%,#7A6CE6 55%,#A877E2 100%) !important;
   border:0 !important;
+  outline:0;
   border-radius:999px !important;
   color:#fff !important;
-  font-weight:700;
-  padding:10px 22px;
-  box-shadow:0 8px 20px rgba(79,107,224,.25);
-  transition:transform .2s, box-shadow .2s;
+  font-size:14px;
+  font-weight:600 !important;
+  letter-spacing:-.01em;
+  line-height:1.4;
+  padding:8px 18px;
+  margin-right:10px;
+  box-shadow:0 2px 8px rgba(91,111,230,.22);
+  text-decoration:none !important;
+  transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
 }
-.header .submit-a-request:hover,
+.header a.submit-a-request:visited{ color:#fff !important; }
+.header a.submit-a-request:hover,
 .header a[href*="request.html"]:hover{
   transform:translateY(-1px);
-  box-shadow:0 12px 26px rgba(79,107,224,.35);
-  text-decoration:none;
+  filter:brightness(1.06);
+  box-shadow:0 6px 16px rgba(91,111,230,.30);
+  color:#fff !important;
 }
+.header a.submit-a-request:active{ transform:none; box-shadow:0 1px 4px rgba(91,111,230,.25); }
+.header a.submit-a-request:focus-visible{ box-shadow:0 0 0 3px rgba(122,108,230,.35); }
 
 /* 로그인 사용자 이름(관리자 ▾) */
 .header .user-info > button,
