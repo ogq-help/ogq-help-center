@@ -198,8 +198,8 @@
   }
 
   var DRAW = {
-    police: function () { return hatPolice(O) + hatPolice(Q); },
-    fire: function () { return helmetFire(O) + helmetFire(Q); },
+    police: function () { return '<g transform="rotate(-9 ' + O + ' 0)">' + hatPolice(O) + '</g>'; },
+    fire: function () { return '<g transform="rotate(-9 ' + O + ' 0)">' + helmetFire(O) + '</g>'; },
     christmas: function () { return fall('snow', 22, '#a9c8ea') + snowCap(O) + snowCap(G) + hatSanta(Q); },
     snow: function () { return fall('snow', 26, '#a9c8ea') + snowCap(O) + snowCap(G) + snowCap(Q); },
     halloween: function () { return hatWitch(G) + pumpkin(820, 214) + bat(80, -36, 1.2) + bat(270, -60, 0.9) + bat(600, -50, 1); },
