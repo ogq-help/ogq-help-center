@@ -176,3 +176,8 @@
 .ogq-req-notice__t{margin:0 0 6px;font-size:15px;font-weight:800;color:#8A5300}
 .ogq-req-notice__d{margin:0 0 6px;font-size:13.5px;line-height:1.65;color:#5C4320}
 .ogq-req-notice__d:last-child{margin-bottom:0}
+/* 해결 안내(초록) */
+.ogq-req-notice--ok{background:#EAF7EE;border-color:#B5E0C2}
+.ogq-req-notice--ok::before{content:"✓";background:#2F9E55}
+.ogq-req-notice--ok .ogq-req-notice__t{color:#1F6E3A}
+.ogq-req-notice--ok .ogq-req-notice__d{color:#2D4A36}
