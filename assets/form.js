@@ -57,7 +57,7 @@ window.OGQ_FORM = {
       ['gra_기타', '기타']
     ] },
     { code: 'mp', name: '광고&제휴', categories: [['mp', '광고&제휴']] },
-    { code: 'bg', name: '백그라운즈', categories: [['bg', '백그라운즈']] },
+    { code: 'bg', name: '백그라운드', categories: [['bg', '백그라운드']] },
     { code: 'etc', name: '기타', categories: [['기타', '기타']] }
   ],
 
