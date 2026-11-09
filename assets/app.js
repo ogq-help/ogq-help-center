@@ -90,6 +90,9 @@
   function kb() {
     if (kbP) return kbP;
     return (kbP = fetch('assets/kb.json').then(function (r) { return r.json(); }).then(function (d) {
+      // 공개 예정 글(publish_from)은 그 시각부터 보인다. 사전 확인은 주소에 ?preview=1
+      var preview = /[?&]preview=1\b/.test(location.search);
+      d.articles = d.articles.filter(function (a) { return preview || !a.publish_from || Date.now() >= Date.parse(a.publish_from); });
       d.cat = {}; d.sec = {}; d.art = {};
       d.categories.forEach(function (c) { d.cat[c.id] = c; });
       d.sections.forEach(function (s) { d.sec[s.id] = s; });
